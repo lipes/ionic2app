@@ -3,7 +3,12 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Page One</ion-title>
+    <ion-title>Page One 1</ion-title>
+    <ion-buttons right>
+      <button menuToggle="right">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -13,6 +18,10 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
   </p>
+
+  <button ion-button (click)="openPageButton()">Button Page</button>
+
+  <button ion-button [navPush]="button">Go To Button Page</button>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>

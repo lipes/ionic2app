@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar>
+  	<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Generated Teste</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	{{ "Teste " | lowercas}}
+	{{ 2017-02-02 | date:"MM/dd/yy"}}
+	<button ion-button (click)="buscarCep()">Request Cep</button>
+</ion-content>
