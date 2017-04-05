@@ -1,46 +1,79 @@
-import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { MyApp } from './app.component';
-import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';
-import { ButtonPage } from '../pages/button/button';
-import { MenuTestPage } from '../pages/menu-test/menu-test';
-import { GeneratedTestePage } from '../pages/generated-teste/generated-teste';
-import { AlertsPage } from '../pages/alerts/alerts';
-import { ConnectionService } from '../providers/connection-service';
-import { Lowercas } from '../pipes/lowercas';
+import { NgModule } from '@angular/core';
+
+import { IonicApp, IonicModule } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage';
+
+import { ConferenceApp } from './app.component';
+
+import { AboutPage } from '../pages/about/about';
+import { PopoverPage } from '../pages/about-popover/about-popover';
+import { AccountPage } from '../pages/account/account';
+import { LoginPage } from '../pages/login/login';
+import { MapPage } from '../pages/map/map';
+import { HomePage } from '../pages/home/home';
+import { ScheduleFilterPage } from '../pages/schedule-filter/schedule-filter';
+import { SessionDetailPage } from '../pages/session-detail/session-detail';
+import { SignupPage } from '../pages/signup/signup';
+import { SpeakerDetailPage } from '../pages/speaker-detail/speaker-detail';
+import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
+import { TabsPage } from '../pages/tabs/tabs';
+import { TutorialPage } from '../pages/tutorial/tutorial';
+import { SupportPage } from '../pages/support/support';
+
+import { ConferenceData } from '../providers/conference-data';
+import { UserData } from '../providers/user-data';
+import { CategoriesData } from '../providers/categories-data';
+
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 @NgModule({
   declarations: [
-    MyApp,
-    Page1,
-    Page2,
-    MenuTestPage,
-    GeneratedTestePage,
-    Lowercas,
-    AlertsPage,
-    ButtonPage
+    ConferenceApp,
+    AboutPage,
+    AccountPage,
+    LoginPage,
+    MapPage,
+    PopoverPage,
+    HomePage,
+    ScheduleFilterPage,
+    SessionDetailPage,
+    SignupPage,
+    SpeakerDetailPage,
+    SpeakerListPage,
+    TabsPage,
+    TutorialPage,
+    SupportPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp,{
-      menuType: 'push',
-      platforms: {
-        ios: {
-          menuType: 'overlay',
-        }
-      }
-    })
+    IonicModule.forRoot(ConferenceApp),
+		IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    Page1,
-    Page2,
-    MenuTestPage,
-    GeneratedTestePage,
-    AlertsPage,
-    ButtonPage
+    ConferenceApp,
+    AboutPage,
+    AccountPage,
+    LoginPage,
+    MapPage,
+    PopoverPage,
+    HomePage,
+    ScheduleFilterPage,
+    SessionDetailPage,
+    SignupPage,
+    SpeakerDetailPage,
+    SpeakerListPage,
+    TabsPage,
+    TutorialPage,
+    SupportPage
   ],
-  providers: [ConnectionService]
+  providers: [
+    ConferenceData,
+    UserData,
+    InAppBrowser,
+    SplashScreen,
+    CategoriesData
+  ]
 })
-export class AppModule {}
+export class AppModule { }

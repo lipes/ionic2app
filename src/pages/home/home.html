@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Meu Guia Noturno</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentFilter()">
+        <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="slider-home">
+    <ion-slides autoplay="5000" loop paginationType="bullets">
+      <ion-slide style="background-color: black">
+        <img src="http://www.joinvillesquaregarden.com.br/images/2017_04_07_site.png"/>
+      </ion-slide>
+      <ion-slide style="background-color: black">
+        <img src="http://www.joinvillesquaregarden.com.br/images/2017_04_07_490x283.jpg"/>
+      </ion-slide>
+      <ion-slide style="background-color: red">
+        <img src="http://www.joinvillesquaregarden.com.br/images/2017_04_21_site.png"/>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <ion-searchbar color="primary"
+                   [(ngModel)]="queryText"
+                   (ionInput)="updateSchedule()"
+                   placeholder="Search">
+  </ion-searchbar>
+
+  <ion-list >
+    <button ion-item *ngFor="let item of items" detail-push (click)="pushPageItem(item)">
+      <ion-icon name="{{item.icon}}" item-left color="primary"></ion-icon>
+      <div class="item-note">
+        {{item.name}}
+      </div>
+    </button>
+
+  </ion-list>
+
+</ion-content>
