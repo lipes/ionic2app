@@ -14,6 +14,22 @@
         {{item.desc}}
       </p>
     </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col text-left>
+        <button ion-button clear small color="primary" icon-left (click)="openContact(speaker)">
+        <ion-icon name='call'></ion-icon>
+          Fone
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="primary" icon-right (click)="goToSpeakerTwitter(speaker)">
+        <ion-icon name="map"></ion-icon> 
+          &nbsp; Como Chegar
+        </button>
+      </ion-col>
+    </ion-row>
+
   </ion-card>
 
 </ion-content>

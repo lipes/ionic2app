@@ -32,9 +32,9 @@
                    (ionInput)="updateSchedule()"
                    placeholder="Search">
   </ion-searchbar>
-
+  
   <ion-list >
-    <button ion-item *ngFor="let item of items" detail-push (click)="pushPageItem(item)">
+    <button ion-item *ngFor="let item of items | filter:{name:queryText}" detail-push (click)="pushPageItem(item)">
       <ion-icon name="{{item.icon}}" item-left color="primary"></ion-icon>
       <div class="item-note">
         {{item.name}}

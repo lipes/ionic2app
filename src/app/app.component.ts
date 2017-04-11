@@ -40,10 +40,8 @@ export class ConferenceApp {
   // the login page disables the left menu
   appPages: PageInterface[] = [
     { title: 'Home', component: TabsPage, tabComponent: HomePage, icon: 'home' },
-     { title: 'Sobre', component: TabsPage, tabComponent: AboutPage, index: 3, icon: 'information-circle' },
-    { title: 'Promoção', component: TabsPage, tabComponent: SpeakerListPage, index: 1, icon: 'contacts' },
-    { title: 'Map', component: TabsPage, tabComponent: MapPage, index: 2, icon: 'map' },
-  
+     { title: 'Sobre', component: TabsPage, tabComponent: AboutPage, index: 2, icon: 'information-circle' },
+    { title: 'Promoção', component: TabsPage, tabComponent: SpeakerListPage, index: 1, icon: 'contacts' }
   ];
   loggedInPages: PageInterface[] = [
     { title: 'Anuncie', component: SupportPage, icon: 'help' }

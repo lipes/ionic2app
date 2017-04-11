@@ -20,12 +20,16 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SupportPage } from '../pages/support/support';
 
+import { ArrayFilterPipe  } from '../pipes/array-filter-pipe';
+
+
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 import { CategoriesData } from '../providers/categories-data';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 
 @NgModule({
@@ -44,7 +48,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SpeakerListPage,
     TabsPage,
     TutorialPage,
-    SupportPage
+    SupportPage,
+    ArrayFilterPipe 
   ],
   imports: [
     IonicModule.forRoot(ConferenceApp),

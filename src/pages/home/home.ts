@@ -1,5 +1,4 @@
 import { Component, ViewChild } from '@angular/core';
-
 import { AlertController, App, FabContainer, ItemSliding, List, ModalController, NavController, LoadingController } from 'ionic-angular';
 
 /*
@@ -13,6 +12,7 @@ import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
 import { SessionDetailPage } from '../session-detail/session-detail';
 import { UserData } from '../../providers/user-data';
 import { CategoriesData } from '../../providers/categories-data';
+import { ArrayFilterPipe } from "../../pipes/array-filter-3pipe";
 
 @Component({
   selector: 'page-home',
